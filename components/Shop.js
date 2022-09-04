@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import uuid from "react-uuid";
 import ItemsList from "./ItemsList";
 import AddItem from "./AddItem";
 
@@ -22,7 +23,7 @@ export default function Shop() {
     setItems([
       ...items,
       {
-        id: items.length + 1,
+        id: uuid(),
         name: name,
         desc: desc,
       },
